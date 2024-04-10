@@ -16,9 +16,6 @@ jobs:
         with:
           node-version: 20.x
           cache: "npm"
-          working-directory: src                    
       - run: npm ci
-        working-directory: src
       - run: npm run build
-        working-directory: src        
   
