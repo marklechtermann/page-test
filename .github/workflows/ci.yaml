@@ -29,10 +29,15 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Fix permissions
+        run: |
+          ls dist
+          find dist
+          pwd     
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/vite.svg'
+          path: 'dist/vite.svg'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
